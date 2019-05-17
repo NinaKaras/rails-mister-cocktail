@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <i class="fas fa-cocktail"></i>
+  <a class="navbar-brand" href="#">MisterCocktail</a>
+<!--   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> -->
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item mx-3 navbar-text">
+        <a class="nav-link"> <%= link_to "Home", root_path %></a>
+      </li>
+      <li class="nav-item mx-3 navbar-text">
+        <a class="nav-link"> <%= link_to "+ Cocktail", new_cocktail_path(@cocktail) %></a>
+      </li>
+      <li class="nav-item dropdown mx-3 navbar-text">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          All cocktails
+        </a>
+         <%= render partial: 'cocktails/navbar_dropdown', collection: @cocktails, as: :cocktail %>
+      </li>
+    </ul>
+  </div>
+</nav>
